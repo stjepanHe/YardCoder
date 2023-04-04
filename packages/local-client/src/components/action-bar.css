@@ -1,0 +1,18 @@
+.action-bar {
+    position:absolute;
+    right:0;
+    top:0;
+    opacity:0.25;
+    transition:opacity 0.3s;
+}
+
+.add-cell:active {
+
+    opacity: 0 !important;
+    transition: opacity 0s;
+}
+
+.action-bar:hover {
+
+    opacity:1;
+}

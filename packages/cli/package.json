@@ -1,0 +1,31 @@
+{
+  "name": "yardcoder",
+  "version": "1.0.0",
+  "description": "",
+  "bin": "dist/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "start": "tsc --watch --preserveWatchOutput",
+    "prepublishOnly": "esbuild src/index.ts --platform=node --outfile=dist/index.js --bundle --minify --define:process.env.NODE_ENV=\\\"production\\\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@yardcoder/local-client": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.22",
+    "@yardcoder/local-api": "^1.0.0",
+    "commander": "^7.2.0",
+    "esbuild": "0.8.26",
+    "express": "^4.18.2",
+    "typescript": "^4.1.3"
+  },
+  "gitHead": "15d044abe52d153502ea3a560fed79d6866213ed"
+}
